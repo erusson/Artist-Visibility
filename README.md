@@ -1,3 +1,3 @@
 # Artist Visibility
 
-An interactive web-based visualization to tell a story and develop insights on artist popularity
+An interactive web-based visualization to help stakeholders interpret data and develop insights on artist popularity
