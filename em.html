@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <title>Artist Visibility</title> 
+
+  <link rel="stylesheet" href="style.css">
+
+  <meta property='og:title' content='Artist Visibility'/>
+  <meta property='og:image' content='http://people.ischool.berkeley.edu/~erusson/spotifystreams/sample.jpg'/>
+  <meta property='og:description' content='An interactive web-based visualization to tell a story and develop insights on artist popularity by defining various metrics and attributes for 657 artists on Spotify'/>
+  <meta property='og:url' content='http://people.ischool.berkeley.edu/~erusson/spotifystreams/emma.html'/>
+
+</head>
+
+<div class="topnav">
+	<a href="#mym">Make Your Mix</a>
+	<a href="#story">The Story</a>
+	<a href="#wip">What is Popularity?</a>
+	<a href="#pp">Power Playlist</a>
+	<a href="#data">Data Sources</a>
+</div>
+
+<img src="spotifylogo.png" align="right" vspace="0" hspace="0" style="width:10%"/>
+
+<body>
+
+	<!-- PAGE SPECIFIC CONTENT -->
+
+	<h1> Artist Visibility </h1>
+
+	<a id="mym"><h2> Make Your Mix </h2></a>
+
+	<hr>
+
+	<h3 align="middle" style="margin-top: 50px"> Summarize and Compare Popularity of Artists with Top and Bottom Charts </h3>
+
+	<p align="middle"> Toggle through attributes to compare the popularity of artists accross different metrics. Scroll down to learn more about the features, toggles, and metrics in the chart. </p>
+
+	<div align="middle" style="margin-top: 50px">
+		<!-- INTERACTIVE DASHBOARD -->
+		<div class='tableauPlaceholder' id='viz1587070041326' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;in&#47;interactive_dashboard1&#47;comparecountry&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='interactive_dashboard1&#47;comparecountry' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;in&#47;interactive_dashboard1&#47;comparecountry&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1587070041326');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='1727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+	</div>
+
+	<br>
+
+	<h3 style="margin-top: 100px"> <u> What Each Metric Means </u> </h3>
+	<ul>
+	  <li><b>Total Streams:</b> the total number of streams an artist has on the daily Top 100 charts of 2017 </li>
+	  <li><b>Total Songs:</b> the total number of distinct songs an artist has on the daily Top 100 charts of 2017 </li>
+	  <li><b>Total Occurrences:</b> the total number of times an arbitrary song by an artist appears on the daily Top 100 charts of 2017 </li>
+	  <li><b>Streams per Song:</b> the total number of streams an average song by an artist has on the daily Top 100 charts of 2017 </li>
+	  <li><b>Streams per Occurrence:</b> the total number of streams an artist gets for every time a song of theirs makes it to the daily Top 100 charts of 2017 </li>
+	</ul>
+
+	<br>
+
+	<h3> <u> Attributes and Actions </u> </h3>
+	<ul>
+	  <li><b>Gender:</b> compare a set of specific genders or all genders</li>
+	  	<ul>
+	  		<li> <i>click</i> drop-down to select genders </li>
+	  		<li> <i>click</i> legend to highlight specific gender </li>
+	  	</ul>
+	  <li><b>Artist:</b> compare a set of specific artists or all artists</li>
+	  	<ul>
+	  		<li> <i>click</i> drop-down to select specific artists </li>
+	  		<li> <i>scroll</i> or <i>type</i> to search for artist by name </li>
+	  	</ul>
+	  <li><b>Country:</b> compare a set of specific English speaking countries or all English speaking countries</li>
+	  	<ul>
+	  		<li> <i>click</i> drop-down to select countries </li>
+	  		<li> <i>scroll</i> or <i>type</i> to search for country by name </li>
+	  	</ul>
+	  <li><b>Metric:</b> compare a pair of specific popularity metrics</li>
+	  	<ul>
+	  		<li> <i>click</i> to select specific metric </li>
+	  	</ul>
+	  <li><b>Range:</b> compare artists from certain ranges of the selected metric</li>
+	  	<ul>
+	  		<li> <i>drag</i> sliders on each end to adjust range of metric </li>
+	  		<li> <i>click</i> <img src="resetbutton.jpg"> on right side to reset range after changing attributes </li>
+	  	</ul>
+	  <li><b>Bubbles:</b> compare each artist </li>
+	  	<ul>
+	  		<li> <i>hover</i> over to see artist details, selected metric value, and top songs by total streams from all countries </li>
+	  		<li> <i>click</i> to see artist's bubble on corresponding chart </li>
+	  	</ul>
+	  <li><b>Genre:</b> compare a specific genre </li>
+	  	<ul>
+	  		<li> <i>click</i> genre label to highlight specific genre </li>
+	  	</ul>
+
+	</ul>
+
+	<a id="story"><h2> The Story </h2></a>
+
+	<hr>
+
+	<br> 
+
+	<p> Many big hits were released in 2017. Gems from Kendrick Lamar's <i>DAMN.</i>, Ed Sheeran's <i>÷</i>, and Drake's <i>More Life</i> dominated the charts. In Ireland, Ed Sheeran had over 50 million streams, with "Shape of You" accumulating around 11.5 million streams in the year of its release. As a Spotify executive of the UK branch, you are interested in learning more about the streaming trends of various artists in order to better focus the growth of the platform in Ireland by monetizing on popular artists. Leveraging streaming data on the daily Top 100 songs during 2017 of English speaking countries, you will consider various metrics to determine the popularity of an artist, while focusing on Ireland for exploration in this report. </p>
+
+	<br> 
+
+	<p> Use the graph below to identify the most popular male and female artist of 2017 in Ireland. Each bubble represents an artist who hit the daily Top 100 charts, and the size of each bubble is relative to the artist's total streams in 2017. Note that the total streams each artist accumulated in Ireland during 2017 is specified in the "Metric" attribute of the message when you hover over the respective artist's bubble. </p>
+
+	<br>
+ 
+	<!-- ALL GENRES -->
+	<div align="middle">
+		<div class='tableauPlaceholder' id='viz1586906014865' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;al&#47;all_genres&#47;compareall&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='all_genres&#47;compareall' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;al&#47;all_genres&#47;compareall&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1586906014865');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='527px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='527px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+	</div>
+
+
+	<h2> Total Streams </h2>
+
+	<hr>
+
+	<br>
+	
+	<div class="row">
+	  <div class="column" style="width: 800px; margin-top: 20px;">
+		<!-- TOTAL STREAMS -->
+		<div class='tableauPlaceholder' id='viz1586901428935' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;to&#47;total_streams&#47;compareartist&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='total_streams&#47;compareartist' /><param name='tabs' value='no' /><param name='toolbar' value='no' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;to&#47;total_streams&#47;compareartist&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1586901428935');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='725px';vizElement.style.height='577px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='725px';vizElement.style.height='577px';} else { vizElement.style.width='100%';vizElement.style.height='1077px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+	  </div>
+	  <div class="column" style="width: 500px; margin-top: 110px;">
+	  	<p style="border: 2px dotted #5c5c5c; padding:15px;"> <b>Total Streams:</b> the total number of streams an artist has on the daily Top 100 charts of 2017 </p>
+
+	  	<br>
+
+	  	<p> In Ireland during 2017, Ed Sheeran had the most streams out of all artists, while Dua Lipa had the most streams out of all female artists. Looking at the chart for Total Streams, you see that Ed Sheeran was streamed about <b>five</b> times more than Dua Lipa. Naively considering this metric, you might conclude that Ed Sheeran was vastly more popular than Dua Lipa. As a side note, both the male and the female artist who got the most streams in 2017 are from the pop genre. </p>
+	  </div>
+	</div>
+
+
+	<h2> Total Songs </h2>
+
+	<hr>
+
+	<br> 
+	
+	<div class="row">
+	  <div class="column" style="width: 800px; margin-top: 20px;">
+		<!-- TOTAL SONGS -->
+		<div class='tableauPlaceholder' id='viz1586987501573' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;to&#47;total_dsongs&#47;compareartist&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='total_dsongs&#47;compareartist' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;to&#47;total_dsongs&#47;compareartist&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1586987501573');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='725px';vizElement.style.height='577px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='725px';vizElement.style.height='577px';} else { vizElement.style.width='100%';vizElement.style.height='1077px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+	  </div>
+	  <div class="column" style="width: 500px; margin-top: 100px;">
+	  	<p style="border: 2px dotted #5c5c5c; padding:15px;"> <b>Total Songs:</b> the total number of distinct songs an artist has on the daily Top 100 charts of 2017 </p>
+
+	  	<br>
+
+	  	<p> Something to consider is the number of songs each artist had on the charts in 2017. 'Total Songs' measures the total number of distinct songs that each artist had on the daily Top 100 charts during 2017. As expected with a much anticipated album drop, Ed Sheeran had thirty-seven songs appear on the charts, while Dua Lipa had only six songs. Something to keep in mind is that Dua Lipa released her first album in 2017, with only a few singles since 2015. On the other hand, <i>divide</i> is Sheeran's third album, with his earliest work dating back to 2009. </p>
+	  </div>
+	</div>
+
+	<h2> Streams per Song </h2>
+
+	<hr>
+
+	<br> 
+
+	<div class="row">
+	  <div class="column" style="width: 800px; margin-top: 20px;">
+	  	<!-- STREAMS PER SONG -->
+	  	<div class='tableauPlaceholder' id='viz1586903399256' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;st&#47;streams_per_song&#47;compareartist&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='streams_per_song&#47;compareartist' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;st&#47;streams_per_song&#47;compareartist&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1586903399256');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='725px';vizElement.style.height='577px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='725px';vizElement.style.height='577px';} else { vizElement.style.width='100%';vizElement.style.height='1077px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+	  </div>
+	  <div class="column" style="width: 500px; margin-top: 120px;">
+	  	<p style="border: 2px dotted #5c5c5c; padding:15px;"> <b>Streams per Song:</b> the total number of streams an average song by an artist has on the daily Top 100 charts of 2017 </p>
+
+	  	<br>
+
+	  	<p> When you average the number of streams by total songs, it looks like Dua Lipa outperformed Ed Sheeran. 'Streams per Song' is calculated by dividing each artist's total streams by the number of distinct songs that appeared on the daily Top 100 charts during 2017. In other words, this metric looks at the number of streams an average song by a specific artist got. Specifically, Dua Lipa got more streams per song than Ed Sheeran. </p>
+	  </div>
+	</div>
+
+
+	<h2> Total Occurrences </h2>
+
+	<hr>
+
+	<br> 
+
+	<div class="row">
+	  <div class="column" style="width: 800px; margin-top: 20px;">
+	  	<!-- TOTAL OCCURRENCES -->
+		<div class='tableauPlaceholder' id='viz1586902661641' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;to&#47;total_occurrences&#47;compareartist&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='total_occurrences&#47;compareartist' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;to&#47;total_occurrences&#47;compareartist&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1586902661641');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='725px';vizElement.style.height='577px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='725px';vizElement.style.height='577px';} else { vizElement.style.width='100%';vizElement.style.height='1077px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+	  </div>
+	  <div class="column" style="width: 500px; margin-top: 40px;">
+		<p style="border: 2px dotted #5c5c5c; padding:15px;"> <b>Total Occurrences:</b> the total number of times an arbitrary song by an artist appears on the daily Top 100 charts of 2017 </p>
+
+	  	<br>
+
+	  	<p> Another factor to consider is the number of times an artist appears on the charts in 2017. 'Total Occurrences' measures the total number of times each artist landed on the daily Top 100 charts during 2017. Note that each artist can appear on a chart multiple times in one day, if the artist had multiple songs being streamed that day. Thus, this metric can also be considered as the total number of times an arbitrary song by an artist appeared on the charts during 2017. For example, Ed Sheeran landed on the charts almost three-thousand times, which averages to about ten of his songs being streamed a day. Dua Lipa only appeared on the charts about four hundred fifty times, which is about one or two songs a day. </p>
+	  </div>
+	</div>
+
+
+	<h2> Streams per Occurrence </h2>
+
+	<hr>
+
+	<br> 
+
+	<div class="row">
+	  <div class="column" style="width: 800px; margin-top: 20px;">
+	  	<!-- STREAMS PER OCCURRENCE -->
+		<div class='tableauPlaceholder' id='viz1586903632786' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;st&#47;streams_per_occurrence&#47;compareartist&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='streams_per_occurrence&#47;compareartist' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;st&#47;streams_per_occurrence&#47;compareartist&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1586903632786');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='725px';vizElement.style.height='577px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='725px';vizElement.style.height='577px';} else { vizElement.style.width='100%';vizElement.style.height='1077px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+	  </div>
+	  <div class="column" style="width: 500px; margin-top: 60px;">
+		<p style="border: 2px dotted #5c5c5c; padding:15px;"> <b>Streams per Occurrence:</b> the total number of streams an artist gets for every time a song of theirs makes it to the daily Top 100 charts of 2017 </p>
+
+	  	<br>
+
+	  	<p> When you average the number of streams by total occurrences, it again looks like Dua Lipa outperformed Ed Sheeran. 'Streams per Occurrence' is calculated by dividing each artist's total streams by the number of times each artist, or an arbitrary song by the artist, appeared on the daily Top 100 charts during 2017. In other words, this metric looks at the number of streams an artist gets for every time a song of theirs makes it to the charts. Specifically, compared to Ed Sheeran, Dua Lipa got more streams each time one of her songs was played and made it to the charts. </p>
+	  </div>
+	</div>
+
+
+	<a id="wip"><h2> What is Popularity? </h2></a>
+
+	<hr>
+
+	<br> 
+
+	<p> When you consider various metrics, a definitive answer on which artist is more popular is unclear. For different concerns and goals, an executive might be interested in different metrics. As per this example, if you care more about the raw number of streams an artist gets, then you may invest more in Ed Sheeran on the platform. However, if you care more about the number of streams an artist gets for every song they have or each time one of their songs hits the charts, then you may be more inclined to invest more in Dua Lipa by highlighting her music on the platform. </p>
+
+	<p> Nevertheless, female artists are vastly underrepresented in the music industry. The simple exploration with Dua Lipa and Ed Sheeran shines light to a much bigger issue: female artists face barriers to entry when it comes to releasing music and actually making a name for themselves in the industy. Currently, female artists are outshined by their male counterparts because of the sheer difference in the number of male artists already present in the industry and the number of songs by male artists that are being fed into the charts. For example, Ed Sheeran has six times as many songs Dua Lipa has on the charts. Yet, the chart-hitting songs by Dua Lipa accumulate more streams on average. </p>
+
+	<p> With only a couple years of experience, Dua Lipa outperforms Ed Sheeran when it comes to the number of streams for each of her songs; but with a significantly smaller discography, she gets significantly fewer total raw streams. If you cared more about the total raw streams an artists gets, you could give Dua Lipa more visibility and support in producing music, so that more of her songs would make it to the charts. With a bigger discography at the rate she has for streams per song, she would be able to accumulate more raw streams than the top performing artist on the charts now. Imagine the success these artists can achieve with more support and investment from decision-makers, as well as the growth of users and streams on the platform if you promote the diversity of its song and artist pool. </p>
+
+	<h2> Digging Deeper </h2>
+
+	<hr>
+
+	<br>
+
+	<p> Some may say that the more songs one has, the fewer streams each song will get. For example, a listerner will only play a whole album a handful of times, while the same listener may put one specific song on repeat dozens of times. Streams might be distributed more among a larger discography, so that one song from a larger tracklist will have fewer streams than a song from a smaller tracklist. </p>
+
+	<p> Let's see if the data matches up with this intuition.</p>
+
+	<!-- RAW -->
+	<img src="images/raw-.png" style="width:60%;  margin-top: 10px; margin-bottom: 10px; display: block; margin: auto;"/>
+
+	<p> Plotting 'Streams per Song' against 'Total Songs' for all artists in the data, you see that there is a slight positive relationship between the number of distinct songs an artist has and the streams each song gets. You also see a positive relationship for 'Streams per Occurrence' vs 'Total Occurrences'. However, the scatter of the data suggests that there are a lot of outliers which may affect the accuracy of the regression. </p>
+
+	<!-- BOX -->
+	<img src="images/boxplots-.png" style="width:50%;  margin-top: 10px; margin-bottom: 10px; margin-bottom: 10px; display: block; margin: auto;"/>
+
+	<p> Looking at the distribution of each metric, any artist with more than 3 songs, 23.2 million streams per song, 638 occurrences, or 253.8 thousand streams per occurrence is an outlier. </p>
+
+	<!-- CLEAN -->
+	<img src="images/clean-.png" style="width:60%;  margin-top: 10px; margin-bottom: 10px; margin-bottom: 10px; display: block; margin: auto;"/>
+
+	<p> Removing these outliers and replotting 'Streams per Song' against 'Total Songs' and 'Streams per Occurrence' against 'Total Occurrences' still shows a positive correlation. With a more robust representation of the data, the claim "the more songs one has, the fewer streams each song will get" is not necessarily true. 
+
+	
+	<h2> Final Thoughts </h2>
+
+	<hr>
+
+	<br>
+
+	<p> Below is the total number of streams that artists from each gender had in 2017; all the male artists were streamed about six more times in total than the female artists. When you look at the total number of artists who hit the charts, the total number of songs that hit the charts, and the total number of times a song appears on the charts, per gender, male artists far exceed their female counterparts. However, when you average out the total streams by those metrics, you see that the numbers are evened out a bit. This suggests that even though the popularity of artists per song and per occurrence is about the same regardless of gender, songs by males are being fed into the charts at a higher frequency, which could very likely be due to the fact that there are just so many more male artists in the industry. </p>
+
+	<!-- ALL -->
+	<img src="images/all.png" class="center" style="width:60%;  margin-top: 10px; margin-bottom: 10px; margin-bottom: 10px; display: block; margin: auto;"/>
+
+	<p> In conclusion, stakeholders have the responsibility to promote female artists on the platform, not only to help reduce barriers, but also to generate revenue with the increase in total streams that these female artists contribute. I'd like to see more female artists highlighted on the platform, giving them the appreciation and visibility they deserve. </p>
+
+
+	<div style="margin-top: 100px" align="center">
+		<a id="pp"><h3> Here's a playlist of some personal favorites: </h3></a>
+
+		<iframe src="https://open.spotify.com/embed/playlist/3uXPryLWr5vdq1FVufSaYt" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+	</div>
+
+
+	<a id="data"><h2> Data Sources </h2></a>
+
+	<hr>
+
+	  <p> The sources for the data used are as follows: </p>
+
+	  <ul style="margin-bottom: 100px">
+	    <li><a style="color: white" href="https://www.kaggle.com/edumucelli/spotifys-worldwide-daily-song-ranking" target="_blank">Spotify's Worldwide Daily Song Ranking</a></li>
+	    <li><a style="color: white" href="https://www.kaggle.com/rkibria/singersgender" target="_blank">Singers' Gender</a></li>
+	    <li><a style="color: white" href="https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes/blob/master/all/all.csv" target="_blank">Countries with Regional Codes </a></li>
+	  <br>
+
+
+  	<!-- PAGE SPECIFIC CONTENT -->
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
